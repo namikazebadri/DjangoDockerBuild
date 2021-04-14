@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Deploying docker image to GCR
-      uses: raccoondev/push-docker-gcr
+      uses: RaccoonDev/push-docker-gcr@v1
       with:
         gcr_host: gcrp.io
         image_name: django-app
