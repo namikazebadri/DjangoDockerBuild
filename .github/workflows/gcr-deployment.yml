@@ -37,6 +37,6 @@ jobs:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_OPEN_SOURCE }}
         SLACK_USERNAME: "Open Source Activities"
         SLACK_TITLE: "New Version Release!"
-        SLACK_MESSAGE: "\n\n${{ github.event.release.name }}: \n\n === ${{ github.repository }} (${{ steps.branch_name.outputs.SOURCE_TAG }}) === \n\n ${{ github.event.release.body }}"
+        SLACK_MESSAGE: "\n\n === ${{ github.repository }} (${{ steps.branch_name.outputs.SOURCE_TAG }}) ==="
         SLACK_FOOTER: "Powered by Element Creative Studio"
         SLACK_ICON: "https://s3-ap-southeast-1.amazonaws.com/cdn-aws.elementcreativestudio.com/github.png"
