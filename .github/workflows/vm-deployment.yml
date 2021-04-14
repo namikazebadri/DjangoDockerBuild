@@ -48,7 +48,6 @@ jobs:
         port: 22
         script: |
           whoami
-          ls -al
           docker run -d -p 8000:8000 --name django-app namikazebadri/django-app:${{ steps.branch_name.outputs.SOURCE_TAG_DOCKER_IMAGE }}
 
     # Notify engineers via slack
