@@ -12,12 +12,17 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Get tag version
+      id: branch_name
+      run: |
+        echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
+
     - name: Deploying docker image to GCR
       uses: RaccoonDev/push-docker-gcr@v1
       with:
-        gcr_host: gcrp.io
+        gcr_host: gcr.io
         image_name: django-app
-        image_tag: ${{ github.event.release.tag_name }}
+        image_tag: ${{ steps.branch_name.outputs.SOURCE_TAG }}
       env:
         GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
         GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
