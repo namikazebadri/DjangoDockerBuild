@@ -12,18 +12,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    # Installing python
-    - name: Installing Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-
-    # Install dependencies
     - uses: raccoondev/push-docker-gcr
       with:
         gcr_host: gcrp.io
         image_name: django-app
         image_tag: ${{ github.event.release.tag_name }}
-        env:
-          GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
-          GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
+      env:
+        GCLOUD_SERVICE_KEY: ${{ secrets.GCLOUD_SERVICE_KEY }}
+        GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
