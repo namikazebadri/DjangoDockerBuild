@@ -39,4 +39,4 @@ jobs:
         SLACK_TITLE: "New Version Release!"
         SLACK_MESSAGE: "\n\n === ${{ github.repository }} (${{ steps.branch_name.outputs.SOURCE_TAG }}) ==="
         SLACK_FOOTER: "Powered by Element Creative Studio"
-        SLACK_ICON: "https://s3-ap-southeast-1.amazonaws.com/cdn-aws.elementcreativestudio.com/github.png"
+        SLACK_ICON: "https://cdn.elementcreativestudio.com/github.png"
