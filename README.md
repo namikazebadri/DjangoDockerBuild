@@ -2,12 +2,20 @@
 
 Django project template with a lot of basic project must-have features, such as containerization and deployments to GCR, ECR, Dockerhub and regular old VM using Github Actions. Also Unit Test, Code Coverage, Static Analysis and Stages Flow (such as dev, staging, uat and production) are  part of this project template repository.
 
-## Build Image
+## What is Inside This Template?
+
+## Development Stage
+
+## Continues Integration
+
+## Deployment Stage
+
+### Build Image
 To build image run this command (__change the tag name & version with your preferred tag name & version__).
 
 `$ docker build . -t myorganization/myimage:1.0.0`
 
-## Running Container from Image
+### Running Container from Image
 
 To create a container from the image, run this command (__change the tag name & version with your preferred tag name & version__).
 
@@ -15,17 +23,15 @@ To create a container from the image, run this command (__change the tag name & 
 
 Then you can access the app from the browser with this url: `http://127.0.0.1:8000`
 
-## Dockerhub image
+### Dockerhub image
 
 This repository is proven by running build in Dockerhub, you can see the result [here](https://hub.docker.com/r/namikazebadri/django-app).
-
----
 
 ## Other Templates
 
 I provide a lot of project templates based on same requirements and patterns. Please visit these repositories too if you are interested. Any contributions, improvements and ideas will be welcomed and appreciated. 
 
-Keep in mind that the purpose of these repositories is to make engineers feel easy when starting new project. Because they don't need to do any other setup for their repository to work and run, like Unit Test, Code Coverage, Static Analysis, CI/CD, Authentication Logic etc. In short, they can just focus to their the application they want to build.
+Keep in mind that the purpose of these repositories is to make engineers feel easy when starting new project. Because they don't need to do any other setup for their repository to work and run, like Unit Test, Code Coverage, Static Analysis, CI/CD, Authentication Logic etc. In short, they can just focus to the application they want to build.
 
 __Python__:
 
