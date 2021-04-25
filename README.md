@@ -27,7 +27,7 @@ Then you can access the app from the browser with this url: `http://127.0.0.1:80
 
 This repository is proven by running build in Dockerhub, you can see the result [here](https://hub.docker.com/r/namikazebadri/django-app).
 
-## Other Templates
+## Other Project Templates
 
 I provide a lot of project templates based on same requirements and patterns. Please visit these repositories too if you are interested. Any contributions, improvements and ideas will be welcomed and appreciated. 
 
