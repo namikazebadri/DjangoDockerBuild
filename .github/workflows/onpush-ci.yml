@@ -19,7 +19,7 @@ jobs:
         image: postgres
         volumes:
           - postgreVolume:/var/lib/postgresql/data
-          - ./init-db.sh:/docker-entrypoint-initdb.d/init-database.sh
+          - init-db.sh:/docker-entrypoint-initdb.d/init-database.sh
         env:
           POSTGRES_PASSWORD: postgres
           restart: unless-stopped
