@@ -55,7 +55,7 @@ jobs:
     - name: Running code coverage
       if: matrix.python-version == '3.6'
       run: |
-        python -m pytest --cov-report html --cov-report term --cov=pylib tests/
+        python -m pytest --cov-report html --cov-report term --cov=app app/tests/
 
     - uses: actions/upload-artifact@v2
       if: matrix.python-version == '3.6'
