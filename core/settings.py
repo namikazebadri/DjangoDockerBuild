@@ -83,7 +83,7 @@ DATABASES = {
         },
         'USER': 'app',
         'PASSWORD': 'app',
-        'HOST': '192.168.2.2',
+        'HOST': '127.0.0.1',
         'PORT': '5432'
     }
 }
