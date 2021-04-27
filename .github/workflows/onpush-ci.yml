@@ -7,8 +7,12 @@ on:
       - '!v*'
 
 jobs:
-  services:
+  build-ci:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [ 3.6, 3.7, 3.8 ]
 
     services:
       postgres:
@@ -26,11 +30,6 @@ jobs:
           --health-retries 5
         ports:
           - 5432:5432
-  build-ci:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.6, 3.7, 3.8]
 
     steps:
     - uses: actions/checkout@v2
