@@ -17,8 +17,6 @@ jobs:
     services:
       postgres:
         image: postgres
-        volumes:
-          - init-db.sh:/docker-entrypoint-initdb.d/init-database.sh
         env:
           POSTGRES_PASSWORD: postgres
         options: >-
