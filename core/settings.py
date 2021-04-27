@@ -73,11 +73,18 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+# See ./init-db.sh for database initialization for this app.
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'app',
+        'OPTIONS': {
+            'options': '-c search_path=app'
+        },
+        'USER': 'app',
+        'PASSWORD': 'app',
+        'HOST': '192.168.2.2',
+        'PORT': '5432'
     }
 }
 
