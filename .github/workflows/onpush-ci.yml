@@ -22,7 +22,6 @@ jobs:
           - init-db.sh:/docker-entrypoint-initdb.d/init-database.sh
         env:
           POSTGRES_PASSWORD: postgres
-          restart: unless-stopped
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
