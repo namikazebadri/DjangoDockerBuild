@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'app',
         'OPTIONS': {
-            'options': '-c search_path=app'
+            'options': '-c search_path=public,app'
         },
         'USER': 'app',
         'PASSWORD': 'app',
