@@ -7,6 +7,25 @@ on:
       - '!v*'
 
 jobs:
+  services:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres
+        volumes:
+          - postgreVolume:/var/lib/postgresql/data
+          - ./init-db.sh:/docker-entrypoint-initdb.d/init-database.sh
+        env:
+          POSTGRES_PASSWORD: postgres
+          restart: unless-stopped
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
   build-ci:
     runs-on: ubuntu-latest
     strategy:
