@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-psql -v ON_ERROR_STOP=1 --host "127.0.0.1" --username "postgres" --dbname "postgres" --no-password <<-EOSQL
+PGPASSWORD="postgres" psql -v ON_ERROR_STOP=1 --host "127.0.0.1" --username "postgres" --dbname "postgres" <<-EOSQL
     CREATE USER app WITH ENCRYPTED PASSWORD 'app';
     CREATE DATABASE app;
 
