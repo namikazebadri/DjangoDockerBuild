@@ -15,7 +15,6 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_HOST: "127.0.0.1"
       POSTGRES_PASSWORD: postgres
     restart: unless-stopped
 
