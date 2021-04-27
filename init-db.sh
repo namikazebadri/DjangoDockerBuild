@@ -12,4 +12,5 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
     DROP SCHEMA IF EXISTS public;
 
     GRANT ALL ON schema app TO app;
+    ALTER USER app CREATEDB;
 EOSQL
