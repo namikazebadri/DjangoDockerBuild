@@ -15,6 +15,10 @@ Django project template with a lot of basic project must-have features, such as 
 
 `pip install -r requirements.txt`
 
+### Setting Up Environment Variables
+
+`source envvars`
+
 ### Creating Container for Database Server
 
 To start new database server, run this command:
@@ -64,6 +68,7 @@ You can use __build-ci__ status checks in the repository settings to ensure cont
 This project template provide deployment using docker image. The deployment targets are GCR, ECR, Dockerhub or VM, you can see the workflows from this these files __.github/workflows/*-deployment.yml__.
 
 ### Build Image
+
 To build image run this command (__change the tag name & version with your preferred tag name & version__).
 
 `$ docker build . -t myorganization/myimage:1.0.0`
